@@ -1,4 +1,4 @@
-module github.com/dropwhile/refidtool
+module github.com/dropwhile/refidtool/v2
 
 go 1.25.1
 
