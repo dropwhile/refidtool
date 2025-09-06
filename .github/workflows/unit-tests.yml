@@ -1,0 +1,48 @@
+name: unit-tests
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [main]
+
+# ensure testing on actual specified versions, and not auto-upgraded toolchain
+# versions
+env:
+  GOTOOLCHAIN: local
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Src Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25.x'
+          check-latest: true
+        id: go
+
+      - name: Build
+        env:
+          GOPROXY: "https://proxy.golang.org"
+          CI: true
+        run: make build
+
+      - name: Check
+        env:
+          GOPROXY: "https://proxy.golang.org"
+          CI: true
+        run: |
+          make check
+
+      - name: Tests
+        env:
+          GOPROXY: "https://proxy.golang.org"
+          CI: true
+        run: make test
