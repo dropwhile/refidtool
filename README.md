@@ -1,9 +1,7 @@
 # refidtool
 
-[![Build Status](https://github.com/dropwhile/refidtool/workflows/unit-tests/badge.svg)][1]
-[![GoDoc](https://godoc.org/github.com/dropwhile/refidtool/v2?status.png)](https://godoc.org/github.com/dropwhile/refidtool/v2)
-[![Go Report Card](https://goreportcard.com/badge/github.com/dropwhile/refidtool/v2)](https://goreportcard.com/report/github.com/dropwhile/refidtool/v2)
-[![License](https://img.shields.io/github/license/dropwhile/refidtool.svg)](https://github.com/dropwhile/refidtool/blob/master/LICENSE.md)
+> [!IMPORTANT]
+> Moved to [codeberg](https://codeberg.org/dropwhile/refidtool)!
 
 ## About
 
